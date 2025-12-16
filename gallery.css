@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ----------------------------- BODY ----------------------------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://i.pinimg.com/1200x/34/e0/b3/34e0b35b2b02b7e38c69defc880b7f1f.jpg') center/cover fixed no-repeat;
+    color: #222;
+    overflow-x: hidden;
+}
+
+/* Floating sakura animation */
+@keyframes floatSakura {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.9; }
+    50% { opacity: 1; }
+    100% { transform: translateY(700px) rotate(360deg); opacity: 0; }
+}
+
+.sakura {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url('https://i.ibb.co/XbS2zyh/sakura.png') no-repeat center/contain;
+    pointer-events: none;
+    animation: floatSakura linear infinite;
+}
+
+/* ----------------------------- HEADING ----------------------------- */
+h1 {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 3.2em;
+    font-family: 'Dancing Script', cursive;
+    color: #ff69b4;
+    text-shadow: 2px 2px 12px rgba(255,182,193,0.5);
+}
+
+/* ----------------------------- NAVIGATION ----------------------------- */
+nav {
+    background: rgba(255, 182, 193, 0.25);
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-radius: 35px;
+    gap: 5px;
+    flex-wrap: wrap;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+}
+
+nav > a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: rgba(255,182,193,0.3);
+}
+
+nav > a:hover {
+    background: #ff69b4;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(255,105,180,0.4);
+}
+
+/* ----------------------------- CONTENT ----------------------------- */
+.content {
+    background: rgba(255, 182, 193, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    width: 90%;
+    max-width: 800px;
+    margin: 60px auto 30px auto;
+    border-radius: 35px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px) scale(0.97);
+    animation: fadeUpContent 1s ease forwards;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+}
+
+.content:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 14px 40px rgba(255,105,180,0.35);
+    background: rgba(255, 182, 193, 0.25);
+}
+
+@keyframes fadeUpContent {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ----------------------------- CARD CONTAINER ----------------------------- */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto 150px auto;
+}
+
+/* ----------------------------- CARD DESIGN ----------------------------- */
+.card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;
+    padding: 18px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.25);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    animation: fadeUpCard 0.9s ease forwards, floatCard 4s ease-in-out infinite;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.4s ease;
+    overflow: hidden;
+}
+
+/* Floating animation */
+@keyframes floatCard {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.02); }
+}
+
+/* Hover effect overrides */
+.card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 16px 45px rgba(255,105,180,0.4);
+    background: rgba(255, 255, 255, 0.75);
+}
+
+/* CARD IMAGE */
+.card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 18px;
+    margin: 0 auto 15px auto;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card img:hover {
+    transform: scale(1.12) rotate(2deg);
+    box-shadow: 
+        0 0 20px rgba(255,105,180,0.6),
+        0 0 30px rgba(255,182,193,0.5);
+}
+
+.card h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #ff1493;
+}
+
+.card p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Fade up animation for cards */
+@keyframes fadeUpCard {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Staggered animation delays */
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+.card:nth-child(5) { animation-delay: 1s; }
+
+/* ----------------------------- FOOTER ----------------------------- */
+.footer {
+    background: rgba(255, 182, 193, 0.25);
+    color: #000;
+    text-align: center;
+    padding: 14px 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 3px solid #ff69b4;
+    font-size: 0.95em;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.25);
+    position: fixed;
+    backdrop-filter: blur(8px);
+}
+
+/* ----------------------------- POPUP IMAGE VIEWER ----------------------------- */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(6px);
+    z-index: 999;
+    animation: fadeBg 0.3s ease;
+}
+
+.popup img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 20px;
+    box-shadow: 0 0 25px white;
+    animation: popZoom 0.4s ease forwards;
+}
+
+#closePopup {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-size: 42px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@keyframes popZoom {
+    0% { opacity: 0; transform: scale(0.6); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeBg {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ----------------------------- BODY ----------------------------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://i.pinimg.com/1200x/9c/19/49/9c1949ba4660a1cf0cd9bac10af678e9.jpg') center/cover fixed no-repeat;
+    color: #3a1f4b;
+    overflow-x: hidden;
+}
+
+/* ----------------------------- HEADING ----------------------------- */
+h1 {
+    text-align: center;
+    margin: 20px;
+    font-size: 3em;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: #ff85b3;
+    text-shadow: 2px 2px 10px rgba(255,255,255,0.4);
+    animation: bounce 2s infinite;
+}
+
+/* Bouncing animation for heading */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ----------------------------- NAVIGATION BAR ----------------------------- */
+nav {
+    background: rgba(255,182,193,0.3);
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    padding: 8px 0;
+    border-radius: 35px;
+    gap: 10px;
+    flex-wrap: wrap;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 6px 20px rgba(255,182,193,0.4);
+}
+
+nav > a {
+    color: #3a1f4b;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 25px;
+    transition: all 0.4s ease;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+nav > a:hover {
+    background: #ff6fb5;
+    color: #fff;
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 6px 18px rgba(255,105,180,0.5);
+}
+
+/* ----------------------------- IMAGE STYLING ----------------------------- */
+.exp-img {
+    width: 65%;
+    max-width: 400px;
+    display: block;
+    margin: 40px auto 20px auto;
+    border-radius: 30px;
+    border: 5px solid rgba(255,182,193,0.6);
+    box-shadow: 0 10px 25px rgba(255,105,180,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-img:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 14px 32px rgba(255,105,180,0.45);
+}
+
+/* ----------------------------- CONTENT BOX ----------------------------- */
+.content {
+    background: rgba(255,192,203,0.25);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto 60px auto;
+    border-radius: 35px;
+    box-shadow: 0 10px 25px rgba(255,105,180,0.3);
+    text-align: center;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+                box-shadow 0.5s ease-in-out,
+                background 0.5s ease-in-out;
+}
+
+.content:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 36px rgba(255,105,180,0.4);
+    background: rgba(255,192,203,0.35);
+}
+
+.content h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+    color: #ff4fa3;
+}
+
+.content p {
+    line-height: 1.7;
+    font-size: 1.15em;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.content p:hover {
+    color: #ff69b4;
+    font-weight: 600;
+    transform: scale(1.02);
+}
+
+/* ----------------------------- EDUCATION CARDS ----------------------------- */
+.cards-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto 120px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.edu-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.edu-card {
+    background: rgba(255,182,193,0.3);
+    backdrop-filter: blur(12px);
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 6px 22px rgba(255,105,180,0.3);
+    text-align: center;
+    transition: 
+        transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+        box-shadow 0.5s ease-in-out,
+        background 0.5s ease-in-out,
+        color 0.3s ease-in-out;
+}
+
+.edu-card:hover {
+    background: rgba(255,182,193,0.45);
+    transform: translateY(-10px) scale(1.08) rotate(-1deg);
+    box-shadow: 0 12px 32px rgba(255,105,180,0.5);
+}
+
+.edu-card h3 {
+    font-size: 1.8em;
+    color: #ff4fa3;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.edu-card p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* ----------------------------- FOOTER ----------------------------- */
+.footer {
+    background: rgba(255,182,193,0.35);
+    color: #3a1f4b;
+    text-align: center;
+    padding: 14px 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 3px solid #ff69b4;
+    font-size: 0.95em;
+    box-shadow: 0 -3px 12px rgba(255,105,180,0.3);
+    position: fixed;
+    backdrop-filter: blur(10px);
+    animation: footerPulse 2.5s infinite;
+}
+
+@keyframes footerPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}

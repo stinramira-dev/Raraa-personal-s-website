@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ----------------------------- BODY ----------------------------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://i.ibb.co/R4DcJ6jN/e90edc6ba50196830f16c7fb21f6b80a.jpg') center/cover fixed no-repeat;
+    color: #333;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ----------------------------- FLOATING BUBBLES ----------------------------- */
+.bubble {
+    position: absolute;
+    background: rgba(255, 192, 203, 0.4);
+    border-radius: 50%;
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh) scale(0.5); opacity: 0.7; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+/* ----------------------------- H1 ----------------------------- */
+h1 {
+    text-align: center;
+    margin: 30px 20px;
+    font-size: 3em;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 12px rgba(200, 150, 250, 0.5);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {opacity: 0; transform: translateY(20px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+/* ----------------------------- NAVIGATION ----------------------------- */
+nav {
+    background: rgba(255, 182, 193, 0.25);
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 10px 0;
+    border-radius: 40px;
+    gap: 10px;
+    flex-wrap: wrap;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    transition: all 0.4s ease;
+}
+
+nav:hover {
+    transform: scale(1.02);
+}
+
+nav > a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav > a:hover {
+    background: #ff69b4;
+    color: #fff;
+    transform: scale(1.12) rotate(-2deg);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.5);
+}
+
+/* ----------------------------- CONTENT ----------------------------- */
+.content {
+    background: rgba(255, 182, 193, 0.2);
+    backdrop-filter: blur(12px);
+    padding: 30px;              /* lebih kecil dari versi sebelumnya */
+    width: 80%;                  /* saiz asal lebih kecil */
+    max-width: 600px;            /* kecilkan max-width */
+    margin: 50px auto 150px auto;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.content:hover {
+    transform: translateY(-5px) scale(1.01);
+}
+
+.content h2 {
+    margin-bottom: 18px;
+    font-size: 1.8em;
+    font-family: 'Verdana', sans-serif;
+    color: #470047;
+}
+
+.content p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.content p:hover {
+    color: #ff69b4;
+    font-weight: 600;
+    transform: scale(1.03);
+}
+
+/* ----------------------------- FOOTER ----------------------------- */
+.footer {
+    background: rgba(255, 182, 193, 0.3);
+    color: #333;
+    text-align: center;
+    padding: 12px 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 3px solid #ff69b4;
+    font-size: 0.95em;
+    box-shadow: 0 -2px 15px rgba(0,0,0,0.25);
+    position: fixed;
+    backdrop-filter: blur(8px);
+}
+
+/* ----------------------------- IMAGES ----------------------------- */
+.exp-img {
+    width: 75%;
+    max-width: 350px;
+    display: block;
+    margin: 40px auto 80px auto;
+    border-radius: 25px;
+    border: 4px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: all 0.4s ease;
+}
+
+.exp-img:hover {
+    transform: scale(1.08) rotate(3deg);
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.45);
+    filter: brightness(1.1);
+}
